@@ -51,7 +51,7 @@
 				},
 				{
 					"name": "keyword.operator.mue",
-					"match": "\\b(stop|pass|set|addx?|subx?|muli?|divi?|modi?|inc|dec|and|x?or|shl|shra?|push|pop|peek|go|call|ret|if[tfgalb]|ifn[galb]|dev[sg]|in|out|intm?|iret)\\b"
+					"match": "\\b(stop|pass|set|addx?|subx?|muli?|divi?|modi?|inc|dec|and|x?or|shl|shra?|push|pop|peek|go|call|ret|if[tfgalb]|ifn[galb]|dev[sg]|in|out|int|iret)\\b"
 				}
 			]
 		},
