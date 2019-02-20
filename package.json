@@ -1,0 +1,25 @@
+{
+    "name": "mue-lang",
+    "displayName": "MUE Assembly Language",
+    "description": "Syntax highlighting for MUE assembly language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.31.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mue",
+            "aliases": ["MUE", "mue"],
+            "extensions": [".mue"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mue",
+            "scopeName": "source.mue",
+            "path": "./syntaxes/mue.tmLanguage.json"
+        }]
+    }
+}

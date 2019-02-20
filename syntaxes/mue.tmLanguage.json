@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MUE",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.block.number-sign.mue",
+					"begin": "##",
+					"end": "##"
+				},
+				{
+					"name": "comment.line.number-sign.mue",
+					"match": "#.*"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"name": "entity.name.function.mue",
+					"match": "\\b[_a-zA-Z]+(?=:)"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.mue",
+					"match": "\\b(enum|const)\\b"
+				},
+				{
+					"name": "keyword.operator.mue",
+					"match": "\\b(stop|pass|set|addx?|subx?|muli?|divi?|modi?|inc|dec|and|x?or|shl|shra?|push|pop|peek|go|call|ret|if[tfgalb]|ifn[galb]|dev[sg]|in|out|intm?|iret)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.mue",
+					"match": "\\b(A|B|C|D|E|F|X|S|P|I)\\b"
+				},
+				{
+					"name": "variable.other.mue",
+					"match": "\\b[_a-zA-Z]+\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.mue",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.mue",
+					"match": "\\\\[ntrbe0\\']"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.mue",
+				"match": "-?([01][_01]*b|[0-7][0-7]*o|[0-9A-F][0-9A-F]*x|[0-9][_0-9]*d?)"
+			}]
+		}
+	},
+	"scopeName": "source.mue"
+}

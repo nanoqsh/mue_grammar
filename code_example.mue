@@ -1,0 +1,28 @@
+## MUE Assembly Language ##
+go main
+
+const DISPLAY_MODE:
+    NONE: 0
+    WRITE: 1
+
+DEVICE:
+    CPU: 0
+    DISPLAY: 1
+
+text: 'Hello World!\n' 0
+
+# main label
+main:
+    set P [DEVICE.DISPLAY] # set device to port
+    devs DISPLAY_MODE.WRITE 1 # set write mode
+    set A 0
+
+    loop:
+        iff [text + A]
+            go end
+
+        out [text + A]
+        inc A; go loop
+
+    end:
+        stop
