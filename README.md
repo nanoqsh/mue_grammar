@@ -1,2 +1,2 @@
-# mue_grammar
-Syntax highlighting for MUE assembly language
+# MUE Assembly Language Grammar
+Syntax highlighting for MUE assembly language for Visual Studio Code
